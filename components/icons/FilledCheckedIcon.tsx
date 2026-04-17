@@ -5,7 +5,7 @@ import { motion, useAnimate } from "framer-motion";
 
 const FilledCheckedIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     (
-        { size = 24, className = "", color = "currentColor", strokeWidth = "1" },
+        { size = 24, className = "", color = "currentColor", strokeWidth = "1", tickClassName = "" },
         ref,
     ) => {
         const [scope, animate] = useAnimate();
@@ -124,7 +124,7 @@ const FilledCheckedIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
 
                     <motion.path
                         d="M15.707 9.293a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
-                        className="check-icon text-white"
+                        className={`check-icon text-white ${tickClassName}`}
                         fill="white"
                         stroke="none"
                     />

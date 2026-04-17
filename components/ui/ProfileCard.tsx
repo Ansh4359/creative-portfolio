@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn, triggerHaptic } from '../../lib/utils';
-import { BoxSelect, Code2, ExternalLink } from 'lucide-react';
+import { BoxSelect, Code2, ExternalLink, LucideProps } from 'lucide-react';
 
 interface ProfileCardProps {
     name: string;
@@ -12,13 +12,13 @@ interface ProfileCardProps {
     portfolioLink?: string;
     imageUrl?: string;
     statusText?: string;
-    Icon1?: React.ElementType;
-    Icon2?: React.ElementType;
+    Icon1?: React.ComponentType<LucideProps>;
+    Icon2?: React.ComponentType<LucideProps>;
     PrimaryBtnText?: string;
     SecondaryBtnText?: string;
     subText?: string;
     onClick?: () => void;
-    Icon3?: React.ElementType;
+    Icon3?: React.ComponentType<LucideProps>;
     index?: number;
 }
 

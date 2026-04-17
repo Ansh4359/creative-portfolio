@@ -3,6 +3,7 @@ export interface AnimatedIconProps {
     color?: string;
     strokeWidth?: number;
     className?: string;
+    tickClassName?: string;
 }
 
 export interface AnimatedIconHandle {

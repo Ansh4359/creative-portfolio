@@ -89,9 +89,9 @@ void main() {
 `;
 
 // --- Scene Component ---
-const PixelScene = ({ imageSrc, isHovered, containerSize }) => {
-    const meshRef = useRef();
-    const texture = useTexture(imageSrc);
+const PixelScene = ({ imageSrc, isHovered, containerSize }: { imageSrc: string; isHovered: boolean; containerSize: { width: number; height: number } }) => {
+    const meshRef = useRef<THREE.Mesh>(null);
+    const texture = useTexture(imageSrc) as THREE.Texture & { image?: HTMLImageElement };
     const { viewport } = useThree();
 
     const uniforms = useMemo(() => ({
@@ -127,20 +127,13 @@ const PixelScene = ({ imageSrc, isHovered, containerSize }) => {
 
     useFrame((state, delta) => {
         if (meshRef.current) {
-            // Logic:
-            // 1. Start at 0 (Pixelated)
-            // 2. Animate to 1 (Visible) when 'revealed' is true
-            // 3. If Hovered, go back to 0 (Pixelated) or maybe 0.5?
-            // Let's go to 0 on hover for the full effect.
-
+            const material = meshRef.current.material as THREE.ShaderMaterial;
             const target = isHovered ? 0 : (revealed ? 1 : 0);
 
-            // Smooth lerp
-            // Use a ref to track current value if we want more control, but direct access is fine
-            meshRef.current.material.uniforms.uProgress.value = THREE.MathUtils.lerp(
-                meshRef.current.material.uniforms.uProgress.value,
+            material.uniforms.uProgress.value = THREE.MathUtils.lerp(
+                material.uniforms.uProgress.value,
                 target,
-                delta * (isHovered ? 2.0 : 1.5) // Faster on hover
+                delta * (isHovered ? 2.0 : 1.5)
             );
         }
     });
@@ -159,9 +152,9 @@ const PixelScene = ({ imageSrc, isHovered, containerSize }) => {
 };
 
 // --- Main Component ---
-export const PixelCard = ({ image, title, desc, tags, className }) => {
+export const PixelCard = ({ image, title, desc, tags, className }: { image: string; title: string; desc: string; tags: string[]; className?: string }) => {
     const [isHovered, setIsHovered] = useState(false);
-    const containerRef = useRef(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
 
     useEffect(() => {
