@@ -47,18 +47,19 @@ const SECTIONS = [
 ];
 
 const EXPERIENCE_DATA = [
-    {
-        role: "AI/ML Intern",
-        company: "IBM SkillsBuild",
-        date: "Jun 2024 - Jul 2024",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png",
-        desc: "Gained hands-on experience in Artificial Intelligence and Machine Learning, developing practical solutions for real-world problems.",
-        details: [
-            "Built and deployed an AI chatbot using IBM Watson Assistant, reducing manual query workload by ~40%.",
-            "Developed a Diabetes Prediction ML model achieving 75% accuracy using supervised learning on healthcare datasets.",
-            "Deployed cloud-hosted components improving accessibility and model uptime."
-        ]
-    }
+  {
+    role: "Full Stack Developer ( Intern )",
+    company: "TaxaGO",
+    date: "Nov 2025 - Jan 2026",
+    logo: "https://taxago.org/favicon.ico",
+    desc: "Contributed as a Full Stack Developer with a primary focus on frontend development, building responsive user interfaces and collaborating on integrating application features.",
+    details: [
+        "Developed responsive and user-friendly interfaces using modern frontend technologies, improving overall user experience.",
+        "Integrated frontend with existing APIs to ensure smooth data flow and functionality across the application.",
+        "Collaborated with the team to implement features and fix UI/UX issues, enhancing product usability.",
+        "Assisted in deployment and testing processes to ensure stable and reliable application performance."
+    ]
+}
 ];
 
 const EXPERIMENTS_DATA = [
@@ -341,56 +342,32 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
 
                     {/* Grid of 4 Projects - Professional Apple Style */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <ProjectCard
-                            index={0}
-                            title="Shinrai"
-                            description="Cloud-Native CI/CD Platform with advanced pipeline visualization and automated deployment strategies."
-                            tags={["AWS", "Docker", "Go"]}
-                            imageUrl="https://i.pinimg.com/originals/99/ca/28/99ca287813fd0e1f689489fa9550dbcd.gif"
-                            githubUrl="https://github.com/syedsubhan/shinrai"
-                            stars={128}
-                            isDimmed={hoveredProject !== null && hoveredProject !== 0}
-                            onHover={() => setHoveredProject(0)}
-                            onLeave={() => setHoveredProject(null)}
-                        />
-                        <ProjectCard
-                            index={1}
-                            title="Aizen Verse"
-                            description="Anime Streaming Experience featuring real-time social watching, localized subtitles, and adaptive streaming."
-                            tags={["React", "Vite", "HLS.js"]}
-                            link="https://aizen-verse.vercel.app/"
-                            videoUrl="/videos/aizen-verse.mp4"
-                            githubUrl="https://github.com/syedsubhan/aizen"
-                            stars={342}
-                            isDimmed={hoveredProject !== null && hoveredProject !== 1}
-                            onHover={() => setHoveredProject(1)}
-                            onLeave={() => setHoveredProject(null)}
-                        />
-                        <ProjectCard
-                            index={2}
-                            title="Nexus UI"
-                            description="Enterprise Component Library System built for scale, accessibility, and developer experience."
-                            tags={["TypeScript", "Storybook"]}
-                            imageUrl="https://i.pinimg.com/originals/0a/d7/35/0ad735f722522d9a424b2a018ff63319.gif"
-                            githubUrl="https://github.com/syedsubhan/nexus"
-                            stars={89}
-                            isDimmed={hoveredProject !== null && hoveredProject !== 2}
-                            onHover={() => setHoveredProject(2)}
-                            onLeave={() => setHoveredProject(null)}
-                        />
-                        <ProjectCard
-                            index={3}
-                            title="Vortex Engine"
-                            description="High-performance Physics Engine running in the browser via WebAssembly for next-gen web games."
-                            tags={["C++", "WASM", "WebGL"]}
-                            imageUrl="https://i.pinimg.com/originals/a7/7f/bf/a77fbfec380b3f63e3feb9a7df60616a.gif"
-                            githubUrl="https://github.com/syedsubhan/vortex"
-                            stars={1024}
-                            isDimmed={hoveredProject !== null && hoveredProject !== 3}
-                            onHover={() => setHoveredProject(3)}
-                            onLeave={() => setHoveredProject(null)}
-                        />
-                    </div>
+    <ProjectCard
+        index={0}
+        title="Portfolio Builder"
+        description="Generates personalized developer portfolios from user input and automatically deploys them to a custom Vercel domain, removing manual setup."
+        tags={["React", "Node.js", "Vercel"]}
+        imageUrl="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cG9ydGZvbGlvfGVufDB8fDB8fHww"
+        githubUrl="https://github.com/Ansh4359/portfolio-builder"
+        stars={0}
+        isDimmed={hoveredProject !== null && hoveredProject !== 0}
+        onHover={() => setHoveredProject(0)}
+        onLeave={() => setHoveredProject(null)}
+    />
+
+    <ProjectCard
+        index={1}
+        title="AI Chat Application"
+        description="Cross-platform AI chat application for Android and web with real-time messaging and intelligent responses, currently under development."
+        tags={["React Native", "Expo", "Web", "AI"]}
+        imageUrl="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=3220&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        githubUrl="https://github.com/Ansh4359/vynk"
+        stars={0}
+        isDimmed={hoveredProject !== null && hoveredProject !== 1}
+        onHover={() => setHoveredProject(1)}
+        onLeave={() => setHoveredProject(null)}
+    />
+</div>
 
                     <div className="mt-12 flex justify-center">
                         <p className="text-sm font-mono font-medium animate-shimmer bg-[linear-gradient(110deg,#939393,45%,#1e1e1e,55%,#939393)] dark:bg-[linear-gradient(110deg,#939393,45%,#e5e5e5,55%,#939393)] bg-[length:200%_100%] bg-clip-text text-transparent">
@@ -409,9 +386,9 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                 </section>
 
                 {/* --- PHILOSOPHY REVEAL (Moved here) --- */}
-                <div className="mb-16 relative">
+                {/* <div className="mb-16 relative">
                     <ScrollFillText />
-                </div>
+                </div> */}
 
                 {/* --- EXPERIMENTS --- */}
                 <section id="experiments" className="mb-16 scroll-mt-32">
@@ -523,7 +500,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
 
                             {/* Split Layout */}
                             <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full border-t border-gray-100 dark:border-white/5 pt-6">
-                                <p className="text-sm font-medium text-gray-600 dark:text-gray-400 flex items-center gap-1.5 opacity-90 order-2 md:order-1">
+                                <p className="text-lg font-medium font-handwriting text-gray-600 dark:text-gray-400 flex items-center gap-1.5 opacity-90 order-2 md:order-1">
                                     Built with love by
                                     <span
                                         className="relative font-semibold text-gray-900 dark:text-white group cursor-pointer inline-block"
@@ -533,7 +510,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                                     </span>
                                     <span className="hover:animate-pulse transition-transform cursor-default">🫶</span>
                                 </p>
-                                <div className="text-sm font-medium text-gray-600 dark:text-gray-400 tracking-wide order-1 md:order-2">
+                                <div className="text-lg font-medium font-handwriting text-gray-600 dark:text-gray-400 tracking-wide order-1 md:order-2">
                                     © {new Date().getFullYear()}. Engineered with Soul.
                                 </div>
                             </div>

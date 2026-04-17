@@ -13,35 +13,19 @@ interface ProjectsPageProps {
 }
 
 const PROJECTS = [
-    {
-        title: "Shinrai",
-        desc: "A Cloud-Native Platform designed for high-scale enterprise deployments. Implements automated CI/CD pipelines using AWS CodePipeline and Docker.",
-        tags: ["AWS", "Docker", "Kubernetes", "React"],
-        image: "https://picsum.photos/seed/shinrai/600/400"
+   {
+        title: "Portfolio Builder",
+        desc: "A web-based platform that generates personalized developer portfolios from user input and automatically deploys them to a custom Vercel domain, eliminating the need for manual setup.",
+        tags: ["React", "Node.js", "Vercel", "Automation"],
+        image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1640&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        link : "https://portfolio-builder.ansh-dev.me"
     },
     {
-        title: "Aizen Verse",
-        desc: "Modern Anime Streaming Platform featuring adaptive HLS streaming, real-time user chat, and a recommendation engine built with Python.",
-        tags: ["React", "Vite", "Python", "HLS"],
-        image: "https://picsum.photos/seed/aizen/600/400"
-    },
-    {
-        title: "NO₂ Prediction System",
-        desc: "Machine Learning driven system utilizing LSTM networks to predict Nitrogen Dioxide levels in urban environments with 94% accuracy.",
-        tags: ["Python", "TensorFlow", "Flask", "Data Sci"],
-        image: "https://picsum.photos/seed/no2/600/400"
-    },
-    {
-        title: "Liquid UI",
-        desc: "An experimental UI library focusing on fluid, physics-based interactions using Framer Motion and WebGL shaders.",
-        tags: ["TypeScript", "WebGL", "Framer Motion"],
-        image: "https://picsum.photos/seed/liquid/600/400"
-    },
-    {
-        title: "Echo Analytics",
-        desc: "Real-time dashboard for visualizing social media sentiment analysis. Processes thousands of tweets per second.",
-        tags: ["Next.js", "D3.js", "Redis"],
-        image: "https://picsum.photos/seed/echo/600/400"
+        title: "AI Chat Application",
+        desc: "A cross-platform AI chat application for Android and web, enabling real-time conversations with intelligent responses. Currently being developed with a focus on seamless UI and scalable architecture.",
+        tags: ["React Native", "Expo", "Web", "AI"],
+        image: "https://picsum.photos/seed/aichat/600/400",
+        link : ""
     }
 ];
 
@@ -90,6 +74,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, toggleTh
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 + (index * 0.1) }}
                             className="group cursor-pointer"
+                            onClick={() => project.link && window.open(project.link, '_blank')}
                         >
                             <div className="relative aspect-[4/3] mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-[#111]">
                                 <PixelCard
@@ -101,7 +86,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, toggleTh
                                 />
 
                                 <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-30 pointer-events-none">
-                                    <ArrowUpRight className="w-5 h-5 text-black dark:text-white" />
+                                    <ArrowUpRight className="w-5 h-5 text-black dark:text-white" href='https://google.com'/>
                                 </div>
                             </div>
 
