@@ -1,0 +1,34 @@
+
+> portfolio-nextjs@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 33500, using available port 3001 instead.
+▲ Next.js 16.2.2 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.0.188:3001
+- Environments: .env.local
+✓ Ready in 349ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/anshsingh/Projects/my_portfolio/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/anshsingh/Projects/my_portfolio/portfolio-nextjs/package-lock.json
+
+
+ GET / 200 in 366ms (next.js: 153ms, application-code: 213ms)
+ GET / 200 in 52ms (next.js: 6ms, application-code: 46ms)
+ GET /projects 200 in 1088ms (next.js: 978ms, application-code: 110ms)
+ GET /blogs 200 in 354ms (next.js: 311ms, application-code: 44ms)
+ GET /kanban 200 in 382ms (next.js: 331ms, application-code: 51ms)
+ GET /experiments 200 in 220ms (next.js: 194ms, application-code: 26ms)
+ GET /contact 200 in 284ms (next.js: 251ms, application-code: 34ms)
+ GET / 200 in 91ms (next.js: 21ms, application-code: 70ms)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. ([native code])
+ POST / 200 in 583ms (next.js: 5ms, application-code: 579ms)
+  └─ ƒ trackVisitor() in 554ms app/actions/counter.ts
+ GET /apple-touch-icon-precomposed.png 404 in 358ms (next.js: 328ms, application-code: 30ms)
+ GET /apple-touch-icon.png 404 in 29ms (next.js: 3ms, application-code: 26ms)
+ POST / 200 in 331ms (next.js: 2ms, application-code: 328ms)
+  └─ ƒ getVisitorStats() in 323ms app/actions/counter.ts
+[?25h
