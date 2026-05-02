@@ -46,7 +46,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate, toggleThem
 
                             <div>
                                 <div className="text-sm font-mono text-gray-400 mb-1 uppercase tracking-wider">Email</div>
-                                <a href="mailto:hello@syedsubhan.com" className="text-xl hover:text-blue-500 transition-colors">hello@syedsubhan.com</a>
+                                <a href="mailto:anshsingh4359@gmail.com" className="text-xl hover:text-blue-500 transition-colors">anshsingh4359@gmail.com</a>
                             </div>
 
                             <div>

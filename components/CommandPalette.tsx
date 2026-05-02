@@ -160,14 +160,14 @@ export function CommandPalette({ onNavigate, toggleTheme, isDark }: CommandPalet
             icon: Linkedin,
             label: "LinkedIn",
             description: "Connect with me professionally",
-            action: () => window.open("https://linkedin.com/in/syedsubhan", "_blank"),
+            action: () => window.open("https://www.linkedin.com/in/ansh01", "_blank"),
         },
         {
             id: "social-email",
             icon: AtSign,
             label: "Email",
             description: "Send me a message directly",
-            action: () => window.open("mailto:syednotion@gmail.com", "_blank"),
+            action: () => window.open("mailto:anshsingh4359@gmail.com", "_blank"),
         },
     ], [onNavigate, toggleTheme, isDark]);
 
