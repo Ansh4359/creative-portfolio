@@ -227,7 +227,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
 
                                     <div className="prose dark:prose-invert prose-gray max-w-lg mb-6">
                                         <div className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base text-pretty">
-                                            Building polished digital experiences <LocationIndicator />. Currently a developer combining engineering rigor with creative design.
+                                           Turning ideas into digital products<LocationIndicator />. Currently a developer combining engineering rigor with creative design.
                                         </div>
                                     </div>
                                 </div>
